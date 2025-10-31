@@ -1,0 +1,19 @@
+[package]
+name = "geonotes98"
+version = "0.1.0"
+edition = "2021"
+description = "GeoNotes 98 — a retro-inspired journaling desk"
+authors = ["GeoNotes 98 Team"]
+license = "MIT"
+
+[build-dependencies]
+tauri-build = { version = "2.0.2", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.2", features = [] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

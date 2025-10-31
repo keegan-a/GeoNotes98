@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-[color:var(--desk-bg,theme('colors.desk.base'))] text-[color:var(--ink,theme('colors.desk.ink'))] font-sans;
+}
