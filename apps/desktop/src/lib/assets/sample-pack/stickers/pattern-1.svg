@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="sunStripe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8d4d8" />
+      <stop offset="100%" stop-color="#9ccfd8" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="18" fill="#fff8f0" stroke="#3d3a5a" stroke-width="4" />
+  <g opacity="0.8">
+    <path d="M12 28c12-6 28-6 40 0s28 6 40 0 28-6 40 0" fill="none" stroke="url(#sunStripe)" stroke-width="8" stroke-linecap="round" />
+    <path d="M12 60c12-6 28-6 40 0s28 6 40 0 28-6 40 0" fill="none" stroke="#f4b8c8" stroke-width="8" stroke-linecap="round" />
+    <path d="M12 92c12-6 28-6 40 0s28 6 40 0 28-6 40 0" fill="none" stroke="#b6dfee" stroke-width="8" stroke-linecap="round" />
+  </g>
+</svg>
