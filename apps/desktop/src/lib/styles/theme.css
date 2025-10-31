@@ -1,0 +1,120 @@
+/*
+  GeoNotes 98 theme foundation
+  - Variables prefixed with --gn- map directly to design tokens defined in tokens.json.
+  - Colors are stored as RGB triplets so Tailwind can compose opacity via rgb(var(--token) / <alpha-value>).
+*/
+
+:root,
+:root.theme-teal95 {
+  color-scheme: light;
+
+  /* Surface layers */
+  --gn-color-surface: 246 247 250; /* neutral-98: base application background */
+  --gn-color-surface-elevated: 233 236 242; /* neutral-95: cards, window bodies */
+  --gn-color-surface-inset: 217 219 227; /* neutral-90: recessed panels */
+  --gn-color-overlay: 15 20 25; /* neutral-0: overlays + scrims */
+
+  /* Content + interaction colors */
+  --gn-color-text: 28 35 43; /* neutral-10: primary text */
+  --gn-color-text-soft: 68 80 98; /* neutral-40: secondary text */
+  --gn-color-border: 90 101 121; /* neutral-50: default border */
+  --gn-color-border-strong: 50 61 76; /* neutral-30: focus rings */
+  --gn-color-shadow-ambient: 17 23 34; /* neutral-0 w/ opacity for shadows */
+
+  /* Accent ramp — Windows 95 teal homage */
+  --gn-color-accent: 29 154 172; /* teal95-50 */
+  --gn-color-accent-strong: 13 99 112; /* teal95-30 */
+  --gn-color-accent-soft: 112 219 226; /* teal95-80 */
+  --gn-color-accent-contrast: 5 41 49; /* teal95-10 */
+
+  /* Functional colors */
+  --gn-color-success: 44 179 195; /* teal95-60 */
+  --gn-color-warning: 236 145 93; /* sunset-70 */
+  --gn-color-critical: 207 93 37; /* sunset-50 */
+
+  /* Elevation + shadow tokens */
+  --gn-shadow-window: 0 4px 10px rgba(var(--gn-color-shadow-ambient) / 0.28);
+  --gn-shadow-window-active: 0 6px 16px rgba(var(--gn-color-shadow-ambient) / 0.32);
+  --gn-shadow-button: 0 1px 0 rgba(255 255 255 / 0.65) inset, 0 2px 3px rgba(var(--gn-color-shadow-ambient) / 0.28);
+  --gn-shadow-menu: 0 3px 12px rgba(var(--gn-color-shadow-ambient) / 0.24);
+  --gn-shadow-tooltip: 0 2px 6px rgba(var(--gn-color-shadow-ambient) / 0.3);
+
+  /* Spacing scale (4px base) */
+  --gn-space-0: 0px;
+  --gn-space-1: 4px;
+  --gn-space-2: 8px;
+  --gn-space-3: 12px;
+  --gn-space-4: 16px;
+  --gn-space-5: 20px;
+  --gn-space-6: 24px;
+  --gn-space-7: 32px;
+  --gn-space-8: 40px;
+  --gn-space-9: 48px;
+  --gn-space-10: 64px;
+
+  /* Radii for beveled UI */
+  --gn-radius-sharp: 0px;
+  --gn-radius-soft: 4px;
+  --gn-radius-medium: 6px;
+  --gn-radius-rounded: 10px;
+  --gn-radius-pill: 999px;
+
+  /* Motion tokens (milliseconds) */
+  --gn-motion-duration-instant: 0ms;
+  --gn-motion-duration-fast: 120ms;
+  --gn-motion-duration-base: 180ms;
+  --gn-motion-duration-slow: 240ms;
+  --gn-motion-ease-standard: cubic-bezier(0.45, 0, 0.2, 1);
+  --gn-motion-ease-snappy: cubic-bezier(0.33, 1, 0.68, 1);
+  --gn-motion-ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout z-index layers */
+  --gn-z-taskbar: 10;
+  --gn-z-window: 20;
+  --gn-z-modal: 30;
+  --gn-z-popover: 40;
+  --gn-z-tooltip: 50;
+}
+
+:root.theme-xp-bliss {
+  --gn-color-surface: 244 247 253; /* xpBliss-95 */
+  --gn-color-surface-elevated: 214 235 255; /* xpBliss-90 */
+  --gn-color-surface-inset: 181 220 255; /* xpBliss-80 */
+  --gn-color-text: 14 42 101; /* xpBliss-10 */
+  --gn-color-text-soft: 23 69 155; /* xpBliss-20 */
+  --gn-color-border: 30 99 209; /* xpBliss-30 */
+  --gn-color-border-strong: 14 42 101; /* xpBliss-10 */
+  --gn-color-accent: 46 129 245; /* xpBliss-40 */
+  --gn-color-accent-strong: 30 99 209; /* xpBliss-30 */
+  --gn-color-accent-soft: 109 179 253; /* xpBliss-60 */
+  --gn-color-accent-contrast: 8 26 64; /* xpBliss-10 darker */
+  --gn-color-success: 73 168 87; /* nostalgic green */
+  --gn-color-warning: 255 186 63; /* warm amber */
+  --gn-color-critical: 204 68 68; /* rich red */
+}
+
+:root.theme-jazzcup {
+  --gn-color-surface: 243 228 246; /* soft mauve base */
+  --gn-color-surface-elevated: 231 196 239; /* jazzcup-80 */
+  --gn-color-surface-inset: 215 166 226; /* jazzcup-70 */
+  --gn-color-text: 60 18 74; /* jazzcup-10 */
+  --gn-color-text-soft: 110 31 130; /* jazzcup-30 */
+  --gn-color-border: 139 42 163; /* jazzcup-40 */
+  --gn-color-border-strong: 82 24 99; /* jazzcup deeper */
+  --gn-color-accent: 169 62 193; /* jazzcup-50 */
+  --gn-color-accent-strong: 124 37 152; /* custom mix */
+  --gn-color-accent-soft: 215 155 239; /* jazzcup-80 blended */
+  --gn-color-accent-contrast: 60 18 74; /* reuse text dark */
+  --gn-color-success: 71 200 196; /* teal pop for contrast */
+  --gn-color-warning: 240 170 92; /* soften sunset */
+  --gn-color-critical: 214 84 126; /* vibrant pink-red */
+}
+
+/* Respect reduced motion users by collapsing animation timing */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --gn-motion-duration-fast: 0ms;
+    --gn-motion-duration-base: 0ms;
+    --gn-motion-duration-slow: 0ms;
+  }
+}
